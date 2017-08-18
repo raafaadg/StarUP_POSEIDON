@@ -7,13 +7,14 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.poseidon.poseidon.CustomRequest;
-
-import com.poseidon.poseidon.APIError;
 import com.poseidon.poseidon.ConnectionUtil;
 import com.poseidon.poseidon.CustomRequest;
 import com.poseidon.poseidon.ServiceGenerator;
+import com.poseidon.poseidon.APIError;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class GetLeitura extends CustomRequest {
 
@@ -51,7 +52,7 @@ public class GetLeitura extends CustomRequest {
                         // Ler os dados aqui, eles vão estar em response.body()
                         dismissProgressDialog();
                         Log.e("MyActivity", "Mostrando");
-                        ((CadastroActivity) getContext()).setInfo(response.body());
+                        //((CadastroActivity) getContext()).setInfo(response.body());
                         Log.e("MyActivity", "Resultado");
                         Toast.makeText(getContext(), "Dado Aquisistado", Toast.LENGTH_SHORT).show();
                     } else if (response.code() == 401) {
@@ -82,4 +83,3 @@ public class GetLeitura extends CustomRequest {
 
     }
 }
-
