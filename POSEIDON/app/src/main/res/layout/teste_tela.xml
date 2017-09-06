@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tela_login">
+
+
+
+    <TextView
+        android:id="@+id/tv_usuario"
+        android:layout_width="@dimen/largura_textview"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="186dp"
+        android:layout_marginStart="186dp"
+        android:hint="Usuário"
+        android:layout_above="@+id/tv_senha" />
+
+    <TextView
+        android:id="@+id/tv_senha"
+        android:layout_width="@dimen/largura_textview"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:hint="Senha"
+        android:layout_above="@+id/bt_log"
+        android:layout_alignLeft="@+id/tv_usuario"
+        android:layout_alignStart="@+id/tv_usuario" />
 
     <Button
         android:id="@+id/bt_log"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bt_info"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="Log In" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/poseidon"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/bt_log"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:id="@+id/bt_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/largura_textview"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="INFORMAÇÕES" />
+        android:layout_alignLeft="@+id/tv_usuario"
+        android:layout_alignStart="@+id/tv_usuario"
+        android:layout_marginBottom="48dp" />
 </RelativeLayout>

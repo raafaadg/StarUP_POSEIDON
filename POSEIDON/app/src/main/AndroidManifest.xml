@@ -32,13 +32,24 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".LoginPoseidon"
-            android:label="Log IN"
+            android:name=".LayoutmaqActivity"
+            android:label="LayoutMaquina"
             android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
+        <activity android:name=".TMaquinasActivity"
+            android:label="TabelaMaquinas"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Grafico22Activity"
+            android:label="Gráfico 2x2"></activity>
+        <activity
+            android:name=".Grafico1Activity"
+            android:label="Gráfico 1x1"></activity>
     </application>
 
 </manifest>

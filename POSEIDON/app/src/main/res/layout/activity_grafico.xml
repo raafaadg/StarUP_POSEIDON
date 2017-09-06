@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/altura_cabecalho"
+        android:src="@drawable/cabecalho"
+        android:layout_gravity="start"/>
+    <Button
+        android:id="@+id/bt_layout_grafico1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/bt_tabela_grafico1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/bt_layout_grafico1"
+        android:layout_alignLeft="@+id/bt_layout_grafico1"
+        android:layout_alignStart="@+id/bt_layout_grafico1" />
+
+    <Button
+        android:id="@+id/bt_grafico_grafico1"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_alignLeft="@+id/bt_tabela_grafico1"
+        android:layout_alignStart="@+id/bt_tabela_grafico1"
+        android:layout_below="@+id/bt_tabela_grafico1" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graf1_11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_below="@id/imageView2"/>
+</RelativeLayout>
