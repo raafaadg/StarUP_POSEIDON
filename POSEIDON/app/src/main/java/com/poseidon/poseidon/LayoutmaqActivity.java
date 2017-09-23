@@ -20,7 +20,6 @@ public class LayoutmaqActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
         loadViwes();
-
         bt_grafico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
