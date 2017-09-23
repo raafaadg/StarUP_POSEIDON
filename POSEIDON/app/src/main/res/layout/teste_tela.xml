@@ -11,19 +11,18 @@
         android:id="@+id/tv_usuario"
         android:layout_width="@dimen/largura_textview"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:layout_marginLeft="186dp"
-        android:layout_marginStart="186dp"
         android:hint="Usuário"
-        android:layout_above="@+id/tv_senha" />
+        android:layout_marginTop="88dp"
+        android:layout_below="@+id/bt_log"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/tv_senha"
         android:layout_width="@dimen/largura_textview"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:hint="Senha"
-        android:layout_above="@+id/bt_log"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/tv_usuario"
         android:layout_alignLeft="@+id/tv_usuario"
         android:layout_alignStart="@+id/tv_usuario" />
 
@@ -34,5 +33,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/tv_usuario"
         android:layout_alignStart="@+id/tv_usuario"
+        android:visibility="gone"
         android:layout_marginBottom="48dp" />
 </RelativeLayout>

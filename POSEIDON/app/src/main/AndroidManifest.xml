@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:label="POSEIDONN">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +26,7 @@
         </activity>
         <activity
             android:name=".InfoActivity"
+            android:screenOrientation="portrait"
             android:label="Informações"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -33,6 +35,7 @@
         </activity>
         <activity
             android:name=".LayoutmaqActivity"
+            android:screenOrientation="portrait"
             android:label="LayoutMaquina"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -40,15 +43,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".TMaquinasActivity"
+        <activity
+            android:name=".TMaquinasActivity"
+            android:screenOrientation="portrait"
             android:label="TabelaMaquinas"
             android:parentActivityName=".MainActivity">
         </activity>
         <activity
             android:name=".Grafico22Activity"
+            android:screenOrientation="portrait"
             android:label="Gráfico 2x2"></activity>
         <activity
             android:name=".Grafico1Activity"
+            android:screenOrientation="portrait"
             android:label="Gráfico 1x1"></activity>
     </application>
 

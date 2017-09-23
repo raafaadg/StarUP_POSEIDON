@@ -44,9 +44,7 @@ public class Grafico22Activity extends AppCompatActivity{
     }
 
     private void loadViwes(){
-        bt_layout = (Button) findViewById(R.id.bt_layout_grafico22);
-        bt_grafico = (Button) findViewById(R.id.bt_grafico_grafico22);
-        bt_tabela = (Button) findViewById(R.id.bt_tabela_grafico22);
+
     }
 
 

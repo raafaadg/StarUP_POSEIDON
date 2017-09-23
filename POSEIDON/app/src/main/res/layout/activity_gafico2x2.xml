@@ -1,76 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fundo">
-
+    <RelativeLayout
+        android:id="@+id/Rl_graf2x2_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top">
     <ImageView
         android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cabecalho"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/altura_cabecalho"
-        android:src="@drawable/cabecalho" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/Rl_graf2x2_1"
+        android:gravity="bottom">
 
-    <Button
-        android:id="@+id/bt_layout_grafico22"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="70dp"
-        android:layout_height="10dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="14dp" />
-
-    <Button
-        android:id="@+id/bt_tabela_grafico22"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="70dp"
-        android:layout_height="10dp" />
-
-    <Button
-        android:id="@+id/bt_grafico_grafico22"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="70dp"
-        android:layout_height="10dp" />
         <LinearLayout
-            android:id="@+id/ll1"
+            android:id="@+id/Ll_graf2x2_12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_weight=".5">
+            android:layout_weight=".5"
+            android:orientation="horizontal">
+
             <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/graf11_22"
+                android:id="@+id/graf11_graf2x2_22"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:layout_weight=".5"/>
+                android:layout_weight=".5" />
 
             <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/graf12_22"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:layout_gravity="end"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight=".5">
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/graf21_22"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:layout_weight=".5"/>
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/graf22_22"
+                android:id="@+id/graf12_graf2x2_22"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:layout_weight=".5"/>
+                android:layout_weight=".5" />
         </LinearLayout>
-</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Ll_graf2x2_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.5">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graf21_graf2x2_22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight=".5"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graf22_graf2x2_22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
