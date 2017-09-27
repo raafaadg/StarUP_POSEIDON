@@ -1,73 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fundo">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_marginBottom="82dp">
-    <RelativeLayout
+
+    <LinearLayout
+        android:id="@+id/Ll1_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/altura_cabecalho"
-                android:src="@drawable/cabecalho"
-                android:layout_gravity="top"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_layout_grafico"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="70dp"
-            android:layout_height="10dp"
-            android:layout_marginLeft="49dp"
-            android:layout_marginStart="49dp"
-            android:layout_marginTop="14dp"
-            android:layout_weight="1"
-            android:text="Button"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+        <ImageView
+            android:id="@+id/ic_vistas_tabelaM"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/menu_square" />
 
-        <Button
-            android:id="@+id/bt_tabela_grafico"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="70dp"
-            android:layout_height="10dp"
-            android:layout_below="@+id/bt_layout_grafico"
-            android:layout_alignLeft="@+id/bt_layout_grafico"
-            android:layout_alignStart="@+id/bt_layout_grafico" />
+        <Spinner
+            android:id="@+id/sp_fabricas_tabelaM"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="6" />
 
-        <Button
-            android:id="@+id/bt_grafico_tabela"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="70dp"
-            android:layout_height="10dp"
-            android:layout_below="@+id/bt_tabela_grafico"
-            android:layout_alignLeft="@+id/bt_tabela_grafico"
-            android:layout_alignStart="@+id/bt_tabela_grafico" />
+        <ImageView
+            android:id="@+id/ic_config_tabelaM"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/settings" />
+    </LinearLayout>
 
-            <de.codecrafters.tableview.TableView
-                xmlns:table="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="9">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.codecrafters.tableview.TableView xmlns:table="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/tabela"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:id="@+id/tabela"
-                table:tableView_columnCount="7"
-                android:layout_below="@+id/imageView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
-
-            </de.codecrafters.tableview.TableView>
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+                table:tableView_columnCount="7"></de.codecrafters.tableview.TableView>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

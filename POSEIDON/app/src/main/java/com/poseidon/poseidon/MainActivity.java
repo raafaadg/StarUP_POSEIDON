@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Carrega o layout que você vai usar nessa activity
-        setContentView(R.layout.teste_tela);
+        setContentView(R.layout.activity_login_poseidon);
         // Carregue todas as views do seu layout
         loadViews();
 
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadViews() {
-        bt_log = (Button) findViewById(R.id.bt_log);
+
+        bt_log = (Button) findViewById(R.id.bt_login);
     }
 
 }

@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="sem_molde">#cb1127</color>
+    <color name="maquina_parada">#FFFFFF</color>
+    <color name="dentro_da_meta">#49ef40</color>
+    <color name="fora_da_meta">#eef476</color>
+    <color name="sem_conexao">#000000</color>
 </resources>

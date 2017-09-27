@@ -1,18 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.poseidon.poseidon.LoginPoseidon"
     android:weightSum="1">
-
-    <!-- Login progress -->
-
 
     <ProgressBar
         android:id="@+id/login_progress"
@@ -40,8 +32,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_email"
                 android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:singleLine="true" />
+                android:maxLines="1" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -58,13 +49,12 @@
                 android:imeActionLabel="@string/action_sign_in_short"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
-                android:maxLines="1"
-                android:singleLine="true" />
+                android:maxLines="1" />
 
         </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/email_sign_in_button"
+        android:id="@+id/bt_login"
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,4 +62,4 @@
         android:text="@string/action_sign_in"
         android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>
