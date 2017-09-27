@@ -58,12 +58,6 @@
               android:layout_alignParentTop="true"
               android:layout_alignParentLeft="true"
               android:layout_alignParentStart="true" />
-          <ImageView
-              android:id="@+id/iv_graf1_legenda"
-              android:layout_below="@+id/iv_graf1_config"
-              android:layout_width="wrap_content"
-              android:layout_height="50dp"
-              android:src="@drawable/settings" />
       </RelativeLayout>
 
   </LinearLayout>

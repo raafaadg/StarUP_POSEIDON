@@ -118,10 +118,12 @@ public class Grafico22Activity extends AppCompatActivity{
                                     public boolean onMenuItemClick(MenuItem item) {
                                         switch (item.getItemId()){
                                             case R.id.it_1x1:
+                                                startActivity(new Intent(Grafico22Activity.this,Grafico1Activity.class));
                                                 break;
                                             case R.id.it_2x1:
                                                 break;
                                             case R.id.it_2x2:
+                                                startActivity(new Intent(Grafico22Activity.this,Grafico22Activity.class));
                                                 break;
 
                                             default:

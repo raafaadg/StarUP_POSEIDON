@@ -3,7 +3,6 @@ package com.poseidon.poseidon;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -50,6 +49,7 @@ public class Grafico1Activity extends AppCompatActivity implements OnChartGestur
     Spinner sp_fabricas_graf1;
     ImageView ic_vistas_graf1;
     ImageView ic_config_graf1;
+    ImageView iv_graf1_config;
 
     private LineChart mChart;
     @Override
@@ -57,6 +57,30 @@ public class Grafico1Activity extends AppCompatActivity implements OnChartGestur
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grafico);
         loadViwes();
+
+        iv_graf1_config.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(Grafico1Activity.this, iv_graf1_config);
+                popup.getMenuInflater().inflate(R.menu.line, popup.getMenu());
+
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.it_layout:
+                                break;
+                            case R.id.it_icone:
+                                break;
+                            default:
+                                break;
+                        }
+                        return true;
+                    }
+                });
+                popup.show();
+            }
+        });
+
 
         mChart = (LineChart) findViewById(R.id.graf_graf1);
         mChart.setOnChartGestureListener(this);
@@ -100,21 +124,21 @@ public class Grafico1Activity extends AppCompatActivity implements OnChartGestur
         //xAxis.addLimitLine(llXAxis); // add x-axis limit line
 
 
-        Typeface tf = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
+        //Typeface tf = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
 
         LimitLine ll1 = new LimitLine(150f, "Upper Limit");
         ll1.setLineWidth(4f);
         ll1.enableDashedLine(10f, 10f, 0f);
         ll1.setLabelPosition(LimitLabelPosition.RIGHT_TOP);
         ll1.setTextSize(10f);
-        ll1.setTypeface(tf);
+       // ll1.setTypeface(tf);
 
         LimitLine ll2 = new LimitLine(-30f, "Lower Limit");
         ll2.setLineWidth(4f);
         ll2.enableDashedLine(10f, 10f, 0f);
         ll2.setLabelPosition(LimitLabelPosition.RIGHT_BOTTOM);
         ll2.setTextSize(10f);
-        ll2.setTypeface(tf);
+       // ll2.setTypeface(tf);
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.removeAllLimitLines(); // reset all limit lines to avoid overlapping lines
@@ -158,6 +182,7 @@ public class Grafico1Activity extends AppCompatActivity implements OnChartGestur
 
     private void loadViwes(){
         loadHeader();
+        iv_graf1_config = (ImageView) findViewById(R.id.iv_graf1_config);
         List<Integer> imagens = new ArrayList<>();
         List<String> nome = new ArrayList<>();
         List<String> porcentagem = new ArrayList<>();
@@ -301,11 +326,11 @@ public class Grafico1Activity extends AppCompatActivity implements OnChartGestur
         super.onWindowFocusChanged(hasFocus);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.line, menu);
-        return true;
-    }
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+       getMenuInflater().inflate(R.menu.line, menu);
+       return true;
+   }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
