@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.poseidon.poseidon">
+package="com.poseidon.poseidon">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+<!-- To auto-complete the email text field in the login form with the user's emails -->
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="android.permission.READ_PROFILE" />
+<uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/poseidon_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/poseidon_launcher"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="landscape"
-            android:label="POSEIDONN">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/poseidon_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/poseidon_launcher"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity
+        android:name=".MainActivity"
+        android:screenOrientation="landscape"
+        android:label="POSEIDONN">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".InfoActivity"
-            android:screenOrientation="landscape"
-            android:label="Informações">
-        </activity>
-        <activity
-            android:name=".LayoutmaqActivity"
-            android:screenOrientation="landscape"
-            android:label="LayoutMaquina">
-        </activity>
-        <activity
-            android:name=".TMaquinasActivity"
-            android:screenOrientation="landscape"
-            android:label="TabelaMaquinas">
-        </activity>
-        <activity
-            android:name=".Grafico22Activity"
-            android:screenOrientation="landscape"
-            android:label="Gráfico 2x2">
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".InfoActivity"
+        android:screenOrientation="landscape"
+        android:label="Informações">
+    </activity>
+    <activity
+        android:name=".LayoutmaqActivity"
+        android:screenOrientation="landscape"
+        android:label="LayoutMaquina">
+    </activity>
+    <activity
+        android:name=".TMaquinasActivity"
+        android:screenOrientation="landscape"
+        android:label="TabelaMaquinas">
+    </activity>
+    <activity
+        android:name=".Grafico22Activity"
+        android:screenOrientation="landscape"
+        android:label="Gráfico 2x2">
 
-        </activity>
-        <activity
-            android:name=".Grafico1Activity"
-            android:screenOrientation="landscape"
-            android:label="Gráfico 1x1">
-        </activity>
-    </application>
+    </activity>
+    <activity
+        android:name=".Grafico1Activity"
+        android:screenOrientation="landscape"
+        android:label="Gráfico 1x1">
+    </activity>
+</application>
 
 </manifest>

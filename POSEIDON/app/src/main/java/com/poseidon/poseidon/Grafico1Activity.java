@@ -55,7 +55,7 @@ public class Grafico1Activity extends AppCompatActivity implements OnChartGestur
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grafico);
+        setContentView(android.R.layout.activity_list_item);
         loadViwes();
 
         iv_graf1_config.setOnClickListener(new View.OnClickListener() {
